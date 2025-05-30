@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_profile_fac"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileFacActivity"
+    android:background="@color/background_color">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/title"
+        app:srcCompat="@drawable/mainimage_pmd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <View
+        android:id="@+id/imageOverlay"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:background="#10000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/title"
+        android:textColor="@color/deep_green"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/subtitle"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/topNav"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageOverlay">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feed_rounder_red"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/back_btn"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/blue_b"
+            android:text="@string/save_btn"
+            android:textColor="@color/black"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topNav"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+
+            <EditText
+                android:id="@+id/facilityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/facility_name_homepage"
+                android:autofillHints="name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/deep_green"
+                android:padding="14dp"
+                android:inputType="text"
+                android:background="@drawable/edittext_rounder"/>
+
+
+            <EditText
+                android:id="@+id/contactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/deep_green"
+                android:hint="@string/contact_number_homepage"
+                android:autofillHints="phone"
+                android:inputType="phone"
+                android:background="@drawable/edittext_rounder"/>
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/deep_green"
+                android:hint="@string/email_homepage"
+                android:autofillHints="emailAddress"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_rounder"/>
+
+            <EditText
+                android:id="@+id/wasteTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/types_waste_homepage"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/deep_green"
+                android:layout_marginTop="10dp"
+                android:inputType="textMultiLine"
+                android:background="@drawable/edittext_rounder"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/userLocation"
+                    android:layout_width="38dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/icon_locate__pmd"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/location_icon"/>
+
+                <EditText
+                    android:id="@+id/Location"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:autofillHints="your location"
+                    android:background="@drawable/edittext_rounder"
+                    android:hint="@string/facility_address_detail"
+                    android:inputType="textPostalAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/deep_green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/facility_description_homepage"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/deep_green"
+                android:background="@drawable/edittext_rounder"/>
+
+            <EditText
+                android:id="@+id/operating_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/operating_hour_detail"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/deep_green"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_rounder"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/deep_green"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_setting"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_rounder"
+            android:text="@string/settings_btn"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEvent"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_rounder"
+            android:text="@string/btn_event"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

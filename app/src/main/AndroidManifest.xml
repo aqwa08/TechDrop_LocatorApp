@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/round_logo"
+        android:label="@string/title"
+        android:roundIcon="@drawable/round_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TechDrop">
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditprofileUserOptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileFacActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA2AWFzE0KJsuBWy2GqD5eQtB2w-tXerw0" />
+
+        <activity
+            android:name=".RegisterUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterFacActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLoginUser"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLoginFacility"
+            android:exported="false" />
+        <activity
+            android:name=".HomePageActivityFac"
+            android:exported="false" />
+        <activity
+            android:name=".HomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LocateDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LocateMapsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".LocateListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

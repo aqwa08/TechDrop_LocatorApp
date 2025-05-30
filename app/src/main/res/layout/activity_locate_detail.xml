@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/facility_detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".LocateDetailActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/title"
+        app:srcCompat="@drawable/mainimage_pmd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Dark overlay -->
+    <View
+        android:id="@+id/imageOverlay"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#10000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/locateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/locate_tittle"
+        android:textColor="@color/deep_green"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Facility Name -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locateTitle">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feed_rounder_red"
+            android:text="@string/back_btn"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_navigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_b"
+            android:text="@string/navigate_btn"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Main Scroll Area -->
+
+
+    <TextView
+        android:id="@+id/FacDis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/fac1_dis"
+        android:textColor="@color/deep_green"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_buttons" />
+
+    <TextView
+        android:id="@+id/facility_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="@string/fac1_name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_buttons" />
+
+    <ScrollView
+        android:id="@+id/detail_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/facility_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#98f7a4"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:clipToOutline="true">
+
+            <!-- Horizontal Image Scroll -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/open_facility_img"
+                        android:src="@drawable/facility_image" />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/open_facility_img"
+                        android:src="@drawable/facility1_1" />
+
+                    <ImageView
+                        android:layout_width="112dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/open_facility_img"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/facility1_2" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Facility Details -->
+            <TextView
+                android:id="@+id/operatingHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="@string/operating_hour_fac" />
+
+            <TextView
+                android:id="@+id/contactNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="@string/contact_fac1" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="@string/email_fac" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/accepted_ewaste" />
+
+            <TextView
+                android:id="@+id/ewasteType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/f1_items"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="158dp"
+                android:background="@color/pale_green"
+                android:gravity="top"
+                android:hint="@string/facility_description"
+                android:padding="12dp"
+                android:id="@+id/descriptionArea"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- FAQ Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/blue_b"
+                android:text="@string/faq_btn"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

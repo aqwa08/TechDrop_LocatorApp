@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "322891405887",
+    "project_id": "techdrop-460921",
+    "storage_bucket": "techdrop-460921.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322891405887:android:cd2561a4f603f6e17e768a",
+        "android_client_info": {
+          "package_name": "com.example.techdrop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG34HKN-YKlGQnxcrcbfrLWq8RCrpsnNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_page_fac"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageActivityFac"
+    android:background="@color/background_color">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/title"
+        app:srcCompat="@drawable/mainimage_pmd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Dark overlay -->
+    <View
+        android:id="@+id/imageOverlay"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:background="#10000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/title"
+        android:textColor="@color/deep_green"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/subtitle"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/topNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageOverlay">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/blue_b"
+        android:text="@string/edit_details_btn"
+        android:textColor="@color/black"
+        android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_rounder"
+            android:text="@string/open_close_status"
+            android:textColor="@color/black"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topNav"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp">
+
+            <TextView
+                android:id="@+id/facStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="14dp"
+                android:text="@string/facility_operation_status"
+                android:background="@drawable/edittext_rounder"
+                android:textSize="16sp"/>
+
+            <!-- Name of Facility -->
+            <TextView
+                android:id="@+id/facilityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="@string/facility_name_homepage"
+                android:background="@drawable/edittext_rounder"
+                android:textSize="16sp"/>
+
+            <!-- Contact Number -->
+            <TextView
+                android:id="@+id/contactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="@string/contact_number_homepage"
+                android:background="@drawable/edittext_rounder"
+                android:textSize="16sp"/>
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/email_homepage"
+                android:textColor="@color/black"
+                android:background="@drawable/edittext_rounder"
+                android:textSize="16sp"/>
+
+            <!-- Types of E-Waste Accepted -->
+            <TextView
+                android:id="@+id/wasteTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="@string/types_waste_homepage"
+                android:background="@drawable/edittext_rounder"
+                android:textSize="16sp"/>
+
+            <!-- Location Address -->
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/location_address_homepage"
+                android:textColor="@color/black"
+                android:background="@drawable/edittext_rounder"
+                android:minLines="2"
+                android:textSize="16sp"/>
+
+            <!-- Facility Description -->
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="@string/facility_description_homepage"
+                android:background="@drawable/edittext_rounder"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/operating_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="@string/operating_hour_detail"
+                android:background="@drawable/edittext_rounder"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/deep_green"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_setting"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_rounder"
+            android:text="@string/settings_btn"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEvent"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_rounder"
+            android:text="@string/btn_event"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/feed_rounder_red"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/closed_facility"
+            android:src="@drawable/facility_image2" />
+
+        <LinearLayout
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="@string/close_fac_name"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/closed_fac_time"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/closed_status"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/fac1_dis" />
+
+    </LinearLayout>
+</LinearLayout>
+
