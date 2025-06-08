@@ -68,7 +68,7 @@ public class LocateListActivity extends AppCompatActivity {
         userLocation.setOnClickListener(v -> getCurrentLocation());
         btnprofile.setOnClickListener(v -> startActivity(new Intent(this, EditProfileUserActivity.class)));
 
-        // 🔥 Add Enter key search to EditText
+ 
         editTextLocation.setOnEditorActionListener((TextView v, int actionId, KeyEvent event) -> {
             if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE ||
                     (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN)) {
@@ -87,7 +87,7 @@ public class LocateListActivity extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("facilities");
 
-        // 🔥 Initial fetch to display facilities even without location
+       
         fetchAndSortFacilities();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.locate_root), (v, insets) -> {
