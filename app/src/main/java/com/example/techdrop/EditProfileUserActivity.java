@@ -69,7 +69,7 @@ public class EditProfileUserActivity extends AppCompatActivity {
             finish();
         });
 
-        btnDelete.setOnClickListener(v -> deleteUserAccount());  // 🔥 Delete account logic
+        btnDelete.setOnClickListener(v -> deleteUserAccount()); 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.edit_profile_user), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -113,17 +113,17 @@ public class EditProfileUserActivity extends AppCompatActivity {
         });
     }
 
-    // 🔥 Delete User Account Method
+   
     private void deleteUserAccount() {
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
             String userId = user.getUid();
             DatabaseReference userRef = mDatabase.child("Users").child(userId);
 
-            // 🔥 Delete user data from Realtime Database
+            // Delete user data from Realtime Database
             userRef.removeValue().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
-                    // 🔥 Delete Authentication account
+                    // Delete Authentication account
                     user.delete().addOnCompleteListener(deleteTask -> {
                         if (deleteTask.isSuccessful()) {
                             Toast.makeText(EditProfileUserActivity.this, "Account deleted successfully.", Toast.LENGTH_SHORT).show();
