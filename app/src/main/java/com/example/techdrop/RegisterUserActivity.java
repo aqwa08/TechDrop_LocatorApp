@@ -64,7 +64,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 String userId = mAuth.getCurrentUser().getUid();
 
-                                // 🔥 Create User object with category "n_user"
+                                // Create User object with category "n_user"
                                 User newUser = new User(username, email, "n_user");
 
                                 mDatabase.child("Users").child(userId).setValue(newUser)
@@ -91,7 +91,7 @@ public class RegisterUserActivity extends AppCompatActivity {
         });
     }
 
-    // 🔥User model class
+    // User model class
     public static class User {
         public String username;
         public String email;
