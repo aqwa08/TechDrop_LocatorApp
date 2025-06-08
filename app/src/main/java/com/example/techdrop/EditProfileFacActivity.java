@@ -182,7 +182,7 @@ public class EditProfileFacActivity extends AppCompatActivity {
             userRef.child("latitude").setValue(latitude);
             userRef.child("longitude").setValue(longitude);
 
-            // 🔥 Add/update facility in global "facilities"
+           
             String facilityId = userId;  // Or generate unique key if multiple facilities per user
             DatabaseReference globalRef = FirebaseDatabase.getInstance().getReference("facilities").child(facilityId);
 
