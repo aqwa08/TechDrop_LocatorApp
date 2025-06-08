@@ -112,14 +112,14 @@ public class LocateMapsActivity extends AppCompatActivity implements OnMapReadyC
         }
         gMap.setMyLocationEnabled(true);
 
-        // 🔥 Add facility markers from both global and user-specific paths
+        // Add facility markers from both global and user-specific paths
         addAllFacilityMarkers();
     }
 
     private void addAllFacilityMarkers() {
         int[] totalMarkers = {0};  // Count of markers
 
-        // 🔥 Add markers from global "facilities"
+        // Add markers from global "facilities"
         facilitiesRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -143,7 +143,7 @@ public class LocateMapsActivity extends AppCompatActivity implements OnMapReadyC
             }
         });
 
-        // 🔥 Add markers from "Users/{userId}/facilities"
+        // Add markers from "Users/{userId}/facilities"
         usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
